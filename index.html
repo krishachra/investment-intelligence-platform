@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ****************for sidebar**************** -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Investment Intelligence
+        </div>
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Stocks</a>
+            <a href="#">Transactions</a>
+            <a href="#">Analytics</a>
+            <a href="#">Investment Journal</a>
+        </nav>
+
+    </aside>
+
+    <!-- *******now the main content which i am making********** -->
+     <main class="main-content">
+        <!-- also there will be heading  -->
+         <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome back,krish</p>
+
+                <div class="profile">
+                <span>KR</span>
+                </div>
+
+            </div>
+         </header>
+
+         <!-- ***********ok now i want Portfolio summary -->
+        <section class="portfolio-summary">
+
+            <div class="summary-card">
+                <p>Total Invested</p>
+                <h2>₹1,62,000</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Current Value</p>
+                <h2>₹1,84,520</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Profit</p>
+                <h2>₹22,520</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Return</p>
+                <h2>13.9%</h2>
+            </div>
+
+        </section>
+        <!-- *********NOW I WANT TO GIVE THEM SUMMARY ALSO FOR THERE PORTFOLIO -->
+        <section class="card">
+
+            <div class="section-header">
+                <h2>Portfolio Performance</h2>
+
+                <div class="time-filter">
+                    <button>1M</button>
+                    <button>6M</button>
+                    <button>1Y</button>
+                    <button>ALL</button>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <!-- Chart will be added later -->
+            </div>
+
+        </section>
+
+                <!-- now this is Lower Dashboard -->
+        <section class="dashboard-grid">
+
+            <!-- this is Holdings of the invester or trader-->
+            <div class="card">
+
+                <div class="section-header">
+                    <h2>Top Holdings</h2>
+                    <a href="#">View All</a>
+                </div>
+
+                <div class="holding">
+                    <span>Reliance</span>
+                    <span>₹32,450</span>
+                </div>
+
+                <div class="holding">
+                    <span>HDFC Bank</span>
+                    <span>₹28,600</span>
+                </div>
+
+                <div class="holding">
+                    <span>Infosys</span>
+                    <span>₹21,300</span>
+                </div>
+
+            </div>
+            <!-- NOW I HAVE ALSO TOLD WHICH SECTOR DO IT HAS INVESTED -->
+    
+            <div class="card">
+
+                <div class="section-header">
+                    <h2>Sector Allocation</h2>
+                    <a href="#">View Details</a>
+                </div>
+
+                <div class="sector">
+                    <span>Financials</span>
+                    <span>32%</span>
+                </div>
+
+                <div class="sector">
+                    <span>Technology</span>
+                    <span>24%</span>
+                </div>
+
+                <div class="sector">
+                    <span>Energy</span>
+                    <span>18%</span>
+                </div>
+
+                <div class="sector">
+                    <span>Consumer</span>
+                    <span>14%</span>
+                </div>
+
+                <div class="sector">
+                    <span>Others</span>
+                    <span>12%</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ALSO I SHOULD TELL HIS RECENT TRANSICATION.....AN HERE I GO  -->
+            <section class="card">
+
+            <div class="section-header">
+                <h2>Recent Transactions</h2>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="transaction">
+                <span>BUY · Reliance</span>
+                <span>10 shares · ₹13,500</span>
+            </div>
+
+            <div class="transaction">
+                <span>BUY · HDFC Bank</span>
+                <span>5 shares · ₹8,000</span>
+            </div>  
+
+            </section>
+
+     </main>
+     <script src="js/script.js"></script>
+    
+</body>
+</html>
