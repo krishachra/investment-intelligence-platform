@@ -189,3 +189,65 @@ FOR CARDS */
     justify-content: center;
     color: #9ca3af;
 }
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    margin-bottom: 24px;
+}
+.holding {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+.holding:last-child {
+    border-bottom: none;
+}
+
+.holding span:first-child {
+    font-weight: 500;
+    color: #374151;
+}
+
+.holding span:last-child {
+    font-weight: 600;
+    color: #111827;
+}
+
+.sector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sector:last-child {
+    border-bottom: none;
+}
+
+.sector span:first-child {
+    color: #374151;
+}
+
+.sector span:last-child {
+    font-weight: 600;
+    color: #111827;
+}
+.section-header a {
+    color: #28a1e8;
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.section-header a:hover {
+    text-decoration: underline;
+}
