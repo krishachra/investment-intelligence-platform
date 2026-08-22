@@ -280,3 +280,67 @@ FOR CARDS */
     color: #6b7280;
     font-size: 14px;
 }
+
+
+/* =========================
+  now it is the time of some  RESPONSIVE DESIGN hehehhe
+========================= */
+
+@media (max-width: 1000px) {
+
+    .portfolio-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* this is for mobile  */
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+        height: auto;
+
+        padding: 16px;
+    }
+
+    .logo {
+        margin-bottom: 16px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .sidebar nav a {
+        white-space: nowrap;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+    .portfolio-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar h1 {
+        font-size: 24px;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+
+}
