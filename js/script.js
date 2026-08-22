@@ -1,3 +1,21 @@
+const portfolio = {
+    totalInvested: 162000,
+    currentValue: 184520,
+    totalProfit: 22520,
+    totalReturn: 13.9
+};
+document.getElementById("total-invested").textContent =
+    `₹${portfolio.totalInvested.toLocaleString("en-IN")}`;
+
+document.getElementById("current-value").textContent =
+    `₹${portfolio.currentValue.toLocaleString("en-IN")}`;
+
+document.getElementById("total-profit").textContent =
+    `₹${portfolio.totalProfit.toLocaleString("en-IN")}`;
+
+document.getElementById("total-return").textContent =
+    `${portfolio.totalReturn}%`;
+    
 const ctx = document.getElementById("portfolioChart");
 
 const portfolioData = {
