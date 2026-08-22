@@ -251,3 +251,32 @@ FOR CARDS */
 .section-header a:hover {
     text-decoration: underline;
 }
+
+
+
+
+
+
+/* =========================
+   TRANSACTIONS
+========================= */
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #83ccf9;
+}
+.transaction:last-child {
+    border-bottom: none;
+}
+.transaction span:first-child {
+    font-weight: 500;
+    color: #374151;
+}
+.transaction span:last-child {
+    color: #6b7280;
+    font-size: 14px;
+}
