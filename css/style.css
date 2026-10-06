@@ -172,7 +172,7 @@ FOR CARDS */
     background-color: #f3f4f6;
    
 }
-.time-filter button:first-child {
+.time-filter button.active {
     background-color: #2563eb;
     color: white;
     border-color: #2563eb;
