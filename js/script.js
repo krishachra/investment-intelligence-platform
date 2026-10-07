@@ -15,7 +15,26 @@ document.getElementById("total-profit").textContent =
 
 document.getElementById("total-return").textContent =
     `${portfolio.totalReturn}%`;
-    
+
+
+const totalProfitElement = document.getElementById("total-profit");
+const totalReturnElement = document.getElementById("total-return");
+if (portfolio.totalProfit >= 0) {
+    totalProfitElement.classList.add("positive");
+    totalProfitElement.classList.remove("negative");
+} else {
+    totalProfitElement.classList.add("negative");
+    totalProfitElement.classList.remove("positive");
+}
+if (portfolio.totalReturn >= 0) {
+    totalReturnElement.classList.add("positive");
+    totalReturnElement.classList.remove("negative");
+} else {
+    totalReturnElement.classList.add("negative");
+    totalReturnElement.classList.remove("positive");
+}
+ 
+
 const ctx = document.getElementById("portfolioChart");
 
 const chartData = {
