@@ -378,3 +378,136 @@ FOR CARDS */
     color: #6b7280;
     font-size: 14px;
 }
+
+
+
+/* =========================
+   HOLDINGS TABLE
+========================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+.holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+.holdings-table th {
+    padding: 14px 16px;
+    background-color: #f9fafb;
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 1px solid #e5e7eb;
+}
+.holdings-table td {
+    padding: 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+}
+.holdings-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+.holdings-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.holdings-table td:first-child {
+    font-weight: 600;
+    color: #111827;
+}
+.holdings-table td.positive {
+    color: #16a34a;
+    font-weight: 600;
+}
+.holdings-table td.negative {
+    color: #dc2626;
+    font-weight: 600;
+}
+#add-investment-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#add-investment-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+
+/* =========================
+   INVESTMENT FORM
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-field input:focus {
+    outline: 2px solid #bfdbfe;
+    border-color: #2563eb;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+#save-investment-btn,
+#cancel-investment-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#save-investment-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+}
+
+#cancel-investment-btn {
+    background-color: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+@media (max-width: 700px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

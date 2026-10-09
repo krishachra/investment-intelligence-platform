@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | Investment Intelligence</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            Investment Intelligence
+        </div>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="#">Stocks</a>
+            <a href="#">Transactions</a>
+            <a href="#">Analytics</a>
+            <a href="#">Investment Journal</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="topbar">
+            <div class="page-heading">
+                <h1>My Portfolio</h1>
+                <p>Track your investments and performance.</p>
+            </div>
+
+            <div class="profile">
+                <span>KR</span>
+            </div>
+        </header>
+
+        <!-- PORTFOLIO SUMMARY -->
+        <section class="portfolio-summary">
+
+            <div class="summary-card">
+                <p>Total Invested</p>
+                <h2 id="total-invested">₹0.00</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Current Value</p>
+                <h2 id="current-value">₹0.00</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Profit/Loss</p>
+                <h2 id="total-profit">₹0.00</h2>
+            </div>
+
+            <div class="summary-card">
+                <p>Total Return</p>
+                <h2 id="total-return">0.00%</h2>
+            </div>
+
+        </section>
+
+        <!-- HOLDINGS TABLE -->
+        <section class="card">
+
+            <div class="section-header">
+                <h2>My Holdings</h2>
+
+                <button type="button" id="add-investment-btn">
+                    + Add Investment
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table class="holdings-table">
+
+                    <thead>
+                        <tr>
+                            <th>Stock</th>
+                            <th>Quantity</th>
+                            <th>Avg. Buy Price</th>
+                            <th>Current Price</th>
+                            <th>Current Value</th>
+                            <th>Profit/Loss</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="holdings-body">
+                        <!-- JavaScript renders holdings here -->
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+        <!-- ADD INVESTMENT FORM -->
+        <section class="card" id="investment-form-section" hidden>
+
+            <div class="section-header">
+                <h2>Add Investment</h2>
+            </div>
+
+            <form id="investment-form">
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="stock-name">Stock Name</label>
+                        <input
+                            id="stock-name"
+                            name="stockName"
+                            type="text"
+                            placeholder="e.g. Reliance Industries"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="quantity">Quantity</label>
+                        <input
+                            id="quantity"
+                            name="quantity"
+                            type="number"
+                            min="1"
+                            step="1"
+                            placeholder="e.g. 10"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="buy-price">Average Buy Price (₹)</label>
+                        <input
+                            id="buy-price"
+                            name="buyPrice"
+                            type="number"
+                            min="0.01"
+                            step="0.01"
+                            placeholder="e.g. 1250"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="current-price">Current Price (₹)</label>
+                        <input
+                            id="current-price"
+                            name="currentPrice"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            placeholder="e.g. 1350"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" id="save-investment-btn">
+                        Add Holding
+                    </button>
+
+                    <button type="button" id="cancel-investment-btn">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- PORTFOLIO JAVASCRIPT -->
+    <script src="js/portfolio.js"></script>
+
+</body>
+</html>
