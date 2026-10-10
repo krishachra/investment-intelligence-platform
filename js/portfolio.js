@@ -6,7 +6,7 @@ const investmentForm = document.getElementById("investment-form");
 const cancelInvestmentBtn = document.getElementById("cancel-investment-btn");
 
 // Sample holdings. All summary values will be calculated from these.
-const holdings = [
+const defaultHoldings = [
     {
         stockName: "Reliance Industries",
         quantity: 10,
@@ -27,11 +27,39 @@ const holdings = [
     }
 ];
 
+let holdings;
+
+const savedHoldings = localStorage.getItem("investmentHoldings");
+
+if (savedHoldings !== null) {
+    try {
+        const parsedHoldings = JSON.parse(savedHoldings);
+
+        if (Array.isArray(parsedHoldings)) {
+            holdings = parsedHoldings;
+        } else {
+            holdings = defaultHoldings;
+        }
+    } catch (error) {
+        holdings = defaultHoldings;
+    }
+} else {
+    holdings = defaultHoldings;
+}
+
 const formatINR = (amount) =>
     "₹" + amount.toLocaleString("en-IN", {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2
     });
+
+function saveHoldings() {
+    localStorage.setItem(
+        "investmentHoldings",
+        JSON.stringify(holdings)
+    );
+}
+
 
 // Calculate and update the four summary cards.
 function updateSummary() {
@@ -154,6 +182,7 @@ investmentForm.addEventListener("submit", (event) => {
         currentPrice
     });
 
+    saveHoldings();
     renderHoldings();
 
     investmentForm.reset();
